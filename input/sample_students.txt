@@ -19,7 +19,7 @@ Wancaster Lu; SO; E; 3.7; 8
 Atlas Bessy; SO; B; 3.4; 9
 Simon Burros; SO; D; 3.6; 10
 Mikey Spurr; JR; C; 4.0; 1
-Michaela Shclichtkrull; JR; G; 3.75; 10 
+Michaela Shclichtkrull; JR; G; 3.75; 10
 Zach Bednarowicz; JR; H; 3.5; 2
 Paul George; JR; B; 3.0; 3
 Colten Gizzard; JR; A; 3.6; 4
@@ -32,7 +32,7 @@ Brett Walker; SR; A; 2.5; 1
 Trent Faulkner; SR; B; 2.7; 2
 Daniel Reed; SR; C; 4.0; 3
 Nathan Sawer; SR; D; 3.2; 4
-Evgeni Falcon; SR: H; 3.0; 5
+Evgeni Falcon; SR; H; 3.0; 5
 Logan Tree; SR; F; 3.5; 6
 Lucas Entertainment; SR; E; 4.0; 7
 Jake Guentzel; SR; F; 3.9; 8
