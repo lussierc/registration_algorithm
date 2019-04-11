@@ -1,5 +1,6 @@
 # Christian Lussier, Ben Watto, Mikey Spurr
 # This file will hold the driver code for the program
+from fileReader import * 
 
 def main():
     """Driver program of the project."""
@@ -9,5 +10,6 @@ def main():
     print("*************************************************************")
 
     file_name = input("Please enter a file name to use:   ")
+    registrationList_processor()
 
 main()
