@@ -27,6 +27,10 @@ def letter_group_organizer(letter_groups, students):
     all_groups.append(second_half)
 
     for half in all_groups:
+        temp0 = 0
+        temp1 = 0
+        counter0 = 0
+        counter1 = 0
         temp = []
         if random.randint(0,100) < 50:
             temp = half[0]
@@ -34,21 +38,35 @@ def letter_group_organizer(letter_groups, students):
             half[1] = temp
         #### IN PROGRESS:
         for subhalve in half:
+            shalve1_gpa = 0
+            shalve2_gpa = 0
             student_len = len(students)
             for i in range(student_len):
-                print(students[i][2], "vs", subhalve[0], "&", subhalve[1])
-                if str(students[i][2]) == str(subhalve[0]):
-                    print("yup")
+                student1 = str(students[i][2])
+                student_ltr = student1.replace(" ", "")
+                subhalve1 = str(subhalve[0])
+                subhalve2 = str(subhalve[1])
+
+                if student_ltr == subhalve1:
+                    print("THIS", subhalve1, students[i][3])
                     temp0 = temp0 + students[i][3]
-                    counter += 1
-                    shalve1_gpa = temp0 / counter
-                elif students[i][2] == subhalve[1]:
-                    print("yup")
-                    temp0 = temp0 + students[i][3]
-                    counter += 1
-                    shalve2_gpa = temp0 / counter
+                    counter0 += 1
+                    shalve1_gpa = temp0 / counter0
+                elif student_ltr == subhalve2:
+                    print("THISIS", subhalve2, students[i][3])
+                    temp1 = temp1 + students[i][3]
+                    counter1 += 1
+                    shalve2_gpa = temp1 / counter1
                 else:
-                    print("test")
+                    continue
+
+            print(subhalve1, shalve1_gpa)
+            print(subhalve2, shalve2_gpa)
+            if shalve1_gpa < shalve2_gpa:
+                print("swap")
+                temp = subhalve[0]
+                subhalve[0] = subhalve[1]
+                subhalve[1] = temp
 
                 # if students[key] == subhalve[0]:
                 # # if subhalve[0].gpa < subhalve[1].gpa:

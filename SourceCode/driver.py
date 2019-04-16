@@ -13,7 +13,7 @@ def main():
 
     #file_name = input("Please enter a file name to use:   ")
 
-    currentgroups = ["A", "B", "C", "F", "E", "I", "H", "G"]
+    currentgroups = ["A", "B", "C", "F", "E", "D", "H", "G"]
     student_list = registrationList_processor()
     #print([x[2] for x in student_list])
 
