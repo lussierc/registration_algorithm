@@ -109,16 +109,22 @@ def letter_group_organizer(letter_groups, students):
             else:
                 continue
 
-    num_SR = len(SR_group)
-    for x in range(num_SR):
-        for j in range(x+1, num_SR):
-            #print(SR_group[x][-1], "vs", SR_group[j][-1])
-            if SR_group[x-1][-1] < SR_group[j][-1]:
-                temp = SR_group[x-1]
-                SR_group[x-1] = SR_group[j]
-                SR_group[j] = temp
-            else:
-                pass
+    student_classes = []
+    student_classes.append(SR_group)
+    student_classes.append(JR_group)
+    student_classes.append(SO_group)
+    student_classes.append(FR_group)
+    for stnt_class in student_classes:
+        length = len(stnt_class)
+        for x in range(length):
+            for j in range(x+1, length):
+                #print(SR_group[x][-1], "vs", SR_group[j][-1])
+                if stnt_class[x-1][-1] < stnt_class[j][-1]:
+                    temp = stnt_class[x-1]
+                    stnt_class[x-1] = stnt_class[j]
+                    stnt_class[j] = temp
+                else:
+                    pass
 
     sorted_students = SR_group + JR_group + SO_group + FR_group
 
