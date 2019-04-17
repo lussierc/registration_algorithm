@@ -2,6 +2,7 @@
 # This file will hold the program's algorithm
 from itertools import chain
 import random
+import pprint
 
 def letter_group_organizer(letter_groups, students):
     """Letter Group Organizer Algorithm"""
@@ -76,4 +77,40 @@ def letter_group_organizer(letter_groups, students):
     for half in all_groups:
         for subhalve in half:
             final_groups += subhalve
-            print(final_groups)
+    print(final_groups)
+
+    sorted_students = []
+    SR_group = []
+    JR_group = []
+    SO_group = []
+    FR_group = []
+    temp = []
+    for group in final_groups:
+        for i in range(len(students)):
+            student1 = str(students[i][2])
+            student_ltr = student1.replace(" ", "") # remove spaces around letter
+            student2 = str(students[i][1])
+            student_yr = student2.replace(" ", "")
+            student_priority = int(students[i][-1])
+            if student_ltr == group:
+                if student_yr == "SR":
+                    SR_group.append(students[i])
+                    # if student_priority > int(SR_group[i][-1]):
+                    #     temp = SR_group[i]
+                    #     SR_group[i] = SR_group[i-1]
+                    #     SR_group[i-1] = temp
+                    # else:
+                    #     continue
+                elif student_yr == "JR":
+                    JR_group.append(students[i])
+                elif student_yr == "SO":
+                    SO_group.append(students[i])
+                elif student_yr == "FR":
+                    FR_group.append(students[i])
+                else:
+                    continue
+            else:
+                continue
+    sorted_students = SR_group + JR_group + SO_group + FR_group
+
+    pprint.pprint(sorted_students)
