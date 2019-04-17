@@ -84,7 +84,7 @@ def letter_group_organizer(letter_groups, students):
     JR_group = []
     SO_group = []
     FR_group = []
-    temp = []
+    temp = ()
     for group in final_groups:
         for i in range(len(students)):
             student1 = str(students[i][2])
@@ -92,15 +92,11 @@ def letter_group_organizer(letter_groups, students):
             student2 = str(students[i][1])
             student_yr = student2.replace(" ", "")
             student_priority = int(students[i][-1])
+
             if student_ltr == group:
                 if student_yr == "SR":
                     SR_group.append(students[i])
-                    # if student_priority > int(SR_group[i][-1]):
-                    #     temp = SR_group[i]
-                    #     SR_group[i] = SR_group[i-1]
-                    #     SR_group[i-1] = temp
-                    # else:
-                    #     continue
+
                 elif student_yr == "JR":
                     JR_group.append(students[i])
                 elif student_yr == "SO":
@@ -109,8 +105,21 @@ def letter_group_organizer(letter_groups, students):
                     FR_group.append(students[i])
                 else:
                     continue
+
             else:
                 continue
+
+    num_SR = len(SR_group)
+    for x in range(num_SR):
+        for j in range(x+1, num_SR):
+            #print(SR_group[x][-1], "vs", SR_group[j][-1])
+            if SR_group[x-1][-1] < SR_group[j][-1]:
+                temp = SR_group[x-1]
+                SR_group[x-1] = SR_group[j]
+                SR_group[j] = temp
+            else:
+                pass
+
     sorted_students = SR_group + JR_group + SO_group + FR_group
 
     pprint.pprint(sorted_students)
