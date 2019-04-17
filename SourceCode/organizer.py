@@ -61,7 +61,6 @@ def letter_group_organizer(letter_groups, students):
                     shalve2_gpa = temp1 / counter1
                 else:
                     continue
-
             print(subhalve1, shalve1_gpa)
             print(subhalve2, shalve2_gpa)
             if shalve1_gpa < shalve2_gpa:
@@ -70,4 +69,11 @@ def letter_group_organizer(letter_groups, students):
                 subhalve[0] = subhalve[1]
                 subhalve[1] = temp
 
-    print(all_groups)
+
+    #print("messed up", all_groups)
+    # Combine letter group sublists back into one list.
+    final_groups = []
+    for half in all_groups:
+        for subhalve in half:
+            final_groups += subhalve
+            print(final_groups)
