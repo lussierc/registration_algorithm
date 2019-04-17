@@ -11,12 +11,13 @@ def letter_group_organizer(letter_groups, students):
     second_half = letter_groups[:len(letter_groups)//2]
     first_half = letter_groups[len(letter_groups)//2:]
 
-    #split into subhalves/quarters
+    # Split into subhalves/quarters:
     first_half_quarter1 = first_half[:len(first_half)//2]
     first_half_quarter2 = first_half[len(first_half)//2:]
     second_half_quarter1 = second_half[:len(second_half)//2]
     second_half_quarter2 = second_half[len(second_half)//2:]
 
+    # Add the now seperated quarters into their respective halves:
     first_half = []
     first_half.append(first_half_quarter1)
     first_half.append(first_half_quarter2)
@@ -27,18 +28,21 @@ def letter_group_organizer(letter_groups, students):
     all_groups.append(first_half)
     all_groups.append(second_half)
 
-    # Sort letter groups
+    # Sort letter groups:
     for half in all_groups:
+        # initialize holder variables
         temp0 = 0
         temp1 = 0
         counter0 = 0
         counter1 = 0
         temp = []
+
         # Randomly swap subhalves:
         if random.randint(0,100) < 50:
             temp = half[0]
             half[0] = half[1]
             half[1] = temp
+
         # Organize letter groups in subhalves by higher GPA:
         for subhalve in half:
             shalve1_gpa = 0
@@ -62,8 +66,6 @@ def letter_group_organizer(letter_groups, students):
                     shalve2_gpa = temp1 / counter1
                 else:
                     continue
-            print(subhalve1, shalve1_gpa)
-            print(subhalve2, shalve2_gpa)
             if shalve1_gpa < shalve2_gpa:
                 print("swap")
                 temp = subhalve[0]
@@ -71,7 +73,6 @@ def letter_group_organizer(letter_groups, students):
                 subhalve[1] = temp
 
 
-    #print("messed up", all_groups)
     # Combine letter group sublists back into one list.
     final_groups = []
     for half in all_groups:
@@ -84,19 +85,16 @@ def letter_group_organizer(letter_groups, students):
     JR_group = []
     SO_group = []
     FR_group = []
-    temp = ()
     for group in final_groups:
         for i in range(len(students)):
-            student1 = str(students[i][2])
-            student_ltr = student1.replace(" ", "") # remove spaces around letter
-            student2 = str(students[i][1])
-            student_yr = student2.replace(" ", "")
+            student_ltr = str(students[i][2])
+            student_yr = str(students[i][1])
             student_priority = int(students[i][-1])
 
+            # if the current student is apart of the class, add them to their class's list:
             if student_ltr == group:
                 if student_yr == "SR":
                     SR_group.append(students[i])
-
                 elif student_yr == "JR":
                     JR_group.append(students[i])
                 elif student_yr == "SO":
@@ -105,7 +103,6 @@ def letter_group_organizer(letter_groups, students):
                     FR_group.append(students[i])
                 else:
                     continue
-
             else:
                 continue
 
@@ -118,7 +115,6 @@ def letter_group_organizer(letter_groups, students):
         length = len(stnt_class)
         for x in range(length):
             for j in range(x+1, length):
-                #print(SR_group[x][-1], "vs", SR_group[j][-1])
                 if stnt_class[x-1][-1] < stnt_class[j][-1]:
                     temp = stnt_class[x-1]
                     stnt_class[x-1] = stnt_class[j]
@@ -126,6 +122,6 @@ def letter_group_organizer(letter_groups, students):
                 else:
                     pass
 
-    sorted_students = SR_group + JR_group + SO_group + FR_group
+    sorted_students = SR_group + JR_group + SO_group + FR_group # add classes back into one sorted/final group
 
-    pprint.pprint(sorted_students)
+    return(sorted_students)
