@@ -29,11 +29,11 @@ def main():
         output_file = open(chosen_file_name,'w') # opens previously created file, creates new file if necessary
         print() # print blank line for spacing
         print() # print blank line for spacing
-        print("{:<30}{:<25}{:<20}{:<15}{:<10}\n".format("Student Name", "Class Year", "Letter Group", "GPA", "Prioity Rank")) # print output header
-        output_file.write("{:<30}{:<25}{:<20}{:<15}{:<10}".format("Student Name", "Class Year", "Letter Group", "GPA", "Prioity Rank"))
-        for ele1,ele2,ele3,ele4,ele5 in sorted_students:
-            print("{:<30}{:<25}{:<20}{:<15}{:<10}".format(ele1,ele2,ele3,ele4,ele5))
-            output_file.write("\n{:<30}{:<25}{:<20}{:<15}{:<10}".format(ele1,ele2,ele3,ele4,ele5))
+        print("{:<30}{:<25}{:<20}{:<15}\n".format("Student Name", "Class Year", "Letter Group", "GPA")) # print output header
+        output_file.write("{:<30}{:<25}{:<20}{:<15}".format("Student Name", "Class Year", "Letter Group", "GPA"))
+        for ele1,ele2,ele3,ele4 in sorted_students:
+            print("{:<30}{:<25}{:<20}{:<15}".format(ele1,ele2,ele3,ele4))
+            output_file.write("\n{:<30}{:<25}{:<20}{:<15}".format(ele1,ele2,ele3,ele4))
         output_file.close()
     except:
         print("\n Exiting....")
