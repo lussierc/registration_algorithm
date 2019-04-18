@@ -17,6 +17,10 @@ def main():
     print()
 
     currentgroups = ["A", "B", "C", "F", "E", "D", "H", "G"]
+
+    print()
+    print("Previous Letter Group Order:", currentgroups)
+    print()
     try:
         student_list = registrationList_processor(file_name)
         #print([x[2] for x in student_list])
@@ -24,8 +28,8 @@ def main():
 
         sorted_students = letter_group_organizer(currentgroups, student_list)
 
-
-        chosen_file_name = input("Sample output file example: ../output/output.txt \n*** Please enter a file name to use:   ")
+        print()
+        chosen_file_name = input("Sample output file example: ../output/output.txt \n*** Please enter a file name to output sorted student info to:   ")
 
         print()
          # file name to output to

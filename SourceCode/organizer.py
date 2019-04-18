@@ -6,8 +6,7 @@ import pprint
 
 def letter_group_organizer(letter_groups, students):
     """Letter Group Organizer Algorithm"""
-    # split in half
-    print("Previous Letter Group Order:", letter_groups)
+    # split in half:
     second_half = letter_groups[:len(letter_groups)//2]
     first_half = letter_groups[len(letter_groups)//2:]
 
@@ -55,19 +54,16 @@ def letter_group_organizer(letter_groups, students):
                 subhalve2 = str(subhalve[1])
 
                 if student_ltr == subhalve1:
-                    print("TEST - ", subhalve1, students[i][3]) # for testing
                     temp0 = temp0 + students[i][3]
                     counter0 += 1
                     shalve1_gpa = temp0 / counter0
                 elif student_ltr == subhalve2:
-                    print("TEST2 -", subhalve2, students[i][3])
                     temp1 = temp1 + students[i][3]
                     counter1 += 1
                     shalve2_gpa = temp1 / counter1
                 else:
                     continue
             if shalve1_gpa < shalve2_gpa:
-                print("swap")
                 temp = subhalve[0]
                 subhalve[0] = subhalve[1]
                 subhalve[1] = temp
@@ -78,7 +74,7 @@ def letter_group_organizer(letter_groups, students):
     for half in all_groups:
         for subhalve in half:
             final_groups += subhalve
-    print(final_groups)
+    print("Sorted Letter Groups:", final_groups)
 
     sorted_students = []
     SR_group = []
