@@ -2,9 +2,9 @@
 # Christian Lussier, Ben Watto, Mikey Spurr
 # This work is ours unless otherwise cited.
 import pprint
-def registrationList_processor():
+def registrationList_processor(file_name):
     """Function to read in the student information"""
-    file_name = "../input/sample_students.txt" #finding the populated file
+    #file_name = "../input/sample_students.txt" #finding the populated file
 
     types = str, str, str, float, int # set the types of each item being read in
 
