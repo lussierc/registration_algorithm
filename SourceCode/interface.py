@@ -10,9 +10,11 @@ def main():
     print("*************************************************************")
     print("* Thanks for using our Registration Letter Group Organizer! *")
     print("*************************************************************")
+    print()
 
     file_name = input("Please enter a file name to use:   ")
-
+    print()
+    
     currentgroups = ["A", "B", "C", "F", "E", "D", "H", "G"]
     student_list = registrationList_processor(file_name)
     #print([x[2] for x in student_list])
