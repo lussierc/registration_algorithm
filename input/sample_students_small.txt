@@ -1,10 +1,10 @@
-Colton Schnieder; FR; A; 3.5; 1
-Josh Yee; FR; H; 2.5; 2
-Aravind Mohan; FR; B; 4.0; 3
-Christian Lussier; SO; F; 2.3; 2
-Spencer Huang; SO; D; 3.5; 3
-Mikey Spurr; JR; C; 4.0; 1
-Ben Watto; JR; G; 3.75; 10
-Dillon Thoma; JR; E; 3.75; 10
-Nick Tocci; SR; F; 2.5; 1
-Trent Faulkner; SR; B; 2.7; 2
+Colton Schnieder; FR; A; 3.5
+Josh Yee; FR; H; 2.7
+Aravind Mohan; FR; B; 4.0
+Christian Lussier; SO; F; 2.3
+Spencer Huang; SO; D; 3.5
+Mikey Spurr; JR; C; 4.0
+Ben Watto; JR; G; 3.75
+Dillon Thoma; JR; E; 3.75
+Nick Tocci; SR; F; 2.5
+Trent Faulkner; SR; B; 2.7
