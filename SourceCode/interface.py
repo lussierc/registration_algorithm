@@ -25,7 +25,10 @@ def main():
         sorted_students = letter_group_organizer(currentgroups, student_list)
 
 
-        chosen_file_name = "../output/output.txt" # file name to output to
+        chosen_file_name = input("Sample output file example: ../output/output.txt \n*** Please enter a file name to use:   ")
+
+        print()
+         # file name to output to
         output_file = open(chosen_file_name,'w') # opens previously created file, creates new file if necessary
         print() # print blank line for spacing
         print() # print blank line for spacing
