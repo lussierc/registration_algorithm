@@ -1,7 +1,6 @@
 """Process in the text file containing the students and their information regarding their registration"""
 # Christian Lussier, Ben Watto, Mikey Spurr
 # This work is ours unless otherwise cited.
-import pprint
 def registrationList_processor(file_name):
     """Function to read in the student information"""
     #file_name = "../input/sample_students.txt" #finding the populated file
