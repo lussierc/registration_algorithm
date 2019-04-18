@@ -12,9 +12,12 @@ def main():
     print("*************************************************************")
     print()
 
-    file_name = input("Please enter a file name to use:   ")
+    try:
+        file_name = input("Sample input file example: ../input/sample_students.txt \n*** Please enter a file name to use:   ")
+    except:
+        print("Please enter a valid input file.")
     print()
-    
+
     currentgroups = ["A", "B", "C", "F", "E", "D", "H", "G"]
     student_list = registrationList_processor(file_name)
     #print([x[2] for x in student_list])
