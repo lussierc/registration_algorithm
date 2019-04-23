@@ -2,6 +2,7 @@
 # This file will hold the driver code for the program
 from fileReader import *
 from organizer import *
+import time
 #from organizer import letter_group_organizer
 
 def main():
@@ -25,8 +26,11 @@ def main():
         student_list = registrationList_processor(file_name)
         #print([x[2] for x in student_list])
 
-
+        start_time = time.time()  # start timer
         sorted_students = letter_group_organizer(currentgroups, student_list)
+        stop_time = time.time()  # stop timer
+        time_elapsed = stop_time - start_time  # calculate function run time
+        print("** It took the program this long to run:", time_elapsed)
 
         print()
         chosen_file_name = input("Sample output file example: ../output/output.txt \n*** Please enter a file name to output sorted student info to:   ")
