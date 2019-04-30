@@ -13,7 +13,7 @@ def main():
     print("*************************************************************")
     print()
 
-    file_name = input("Sample input file example: ../input/sample_students.txt \n*** Please enter a file name to use:   ")
+    file_name = input("Sample input file example: ../data/input/sample_students.txt \n*** Please enter a file name to use:   ")
 
     print()
 
@@ -37,7 +37,7 @@ def main():
         print("** It took the program this long to run:", time_elapsed)
 
         print()
-        chosen_file_name = input("Sample output file example: ../output/output.txt \n*** Please enter a file name to output sorted student info to:   ")
+        chosen_file_name = input("Sample output file example: ../data/output/output.txt \n*** Please enter a file name to output sorted student info to:   ")
 
         print()
          # file name to output to
