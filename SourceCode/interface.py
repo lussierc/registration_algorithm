@@ -17,17 +17,21 @@ def main():
 
     print()
 
-    currentgroups = ["A", "B", "C", "F", "E", "D", "H", "G"]
+    # get user's preferred genres:
+    user_input_groups = input("Enter last semester's letter group order. Must contain letters A-H only!\n **Example Use: A, B, C, F, E, D, H, G\n")
+    current_groups = [x.strip() for x in user_input_groups.split(', ')] # get the user's chosen preferences
+    print() # blank line for spacing
+    #currentgroups = ["A", "B", "C", "F", "E", "D", "H", "G"]
 
     print()
-    print("Previous Letter Group Order:", currentgroups)
+    print("Previous Letter Group Order:", current_groups)
     print()
     try:
         student_list = registrationList_processor(file_name)
         #print([x[2] for x in student_list])
 
         start_time = time.time()  # start timer
-        sorted_students = letter_group_organizer(currentgroups, student_list)
+        sorted_students = letter_group_organizer(current_groups, student_list)
         stop_time = time.time()  # stop timer
         time_elapsed = stop_time - start_time  # calculate function run time
         print("** It took the program this long to run:", time_elapsed)
