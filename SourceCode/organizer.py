@@ -3,7 +3,6 @@
 # Authors: Christian Lussier, Ben Watto, Mikey Spurr
 # "All work is our own unless otherwise cited.""
 
-from itertools import chain
 import random
 
 def letter_group_organizer(letter_groups, students):
@@ -50,6 +49,7 @@ def letter_group_organizer(letter_groups, students):
 
     # Sort letter groups:
     for half in all_groups:
+        print("Entering a new half.")
         # initialize holder variables
         temp0 = 0
         temp1 = 0
@@ -67,7 +67,7 @@ def letter_group_organizer(letter_groups, students):
             print()
 
         # Organize letter groups in subhalves by higher GPA:
-        print("Calculating average GPA for each letter group.")
+        print("Calculating average GPA for each letter group in the current half.")
         for subhalve in half:
             shalve1_gpa = 0
             shalve2_gpa = 0

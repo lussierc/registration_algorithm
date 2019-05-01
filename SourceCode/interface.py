@@ -37,6 +37,7 @@ def main():
         sorted_students = letter_group_organizer(current_groups, student_list)
         stop_time = time.time()  # stop timer
         time_elapsed = stop_time - start_time  # calculate function run time
+        print() 
         print("** It took the algorithm this long to run:", time_elapsed)
         print()
 
