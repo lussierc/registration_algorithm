@@ -121,7 +121,6 @@ def letter_group_organizer(letter_groups, students):
         for i in range(len(students)):
             student_ltr = str(students[i][2])
             student_yr = str(students[i][1])
-            student_priority = int(students[i][-1])
 
             # if the current student is apart of the class, add them to their class's list:
             if student_ltr == group:
