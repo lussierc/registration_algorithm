@@ -1,11 +1,14 @@
-# Christian Lussier, Ben Watto, Mikey Spurr
-# This file will hold the program's algorithm
+"""This file holds the program's algorithm."""
+
+# Authors: Christian Lussier, Ben Watto, Mikey Spurr
+# "All work is our own unless otherwise cited.""
+
 from itertools import chain
 import random
-import pprint
 
 def letter_group_organizer(letter_groups, students):
-    """Letter Group Organizer Algorithm"""
+    """Letter Group Organizer and Student Sorting Algorithm."""
+
     # split in half:
     second_half = letter_groups[:len(letter_groups)//2]
     first_half = letter_groups[len(letter_groups)//2:]

@@ -1,5 +1,8 @@
-# Christian Lussier, Ben Watto, Mikey Spurr
-# This file will hold the driver code for the program
+"""This file will hold the driver code for the program."""
+
+# Authors: Christian Lussier, Ben Watto, Mikey Spurr
+# "All work is our own unless otherwise cited.""
+
 from fileReader import *
 from organizer import *
 import time
@@ -7,6 +10,7 @@ import time
 
 def main():
     """Driver program of the project."""
+
     # Print welcome message:
     print("*************************************************************")
     print("* Thanks for using our Registration Letter Group Organizer! *")
@@ -35,7 +39,7 @@ def main():
         time_elapsed = stop_time - start_time  # calculate function run time
         print("** It took the algorithm this long to run:", time_elapsed)
         print()
-        
+
         # file name to output to:
         chosen_file_name = input("Sample output file example: ../data/output/output.txt \n*** Please enter a file name to output sorted student info to:   ")
         print()
