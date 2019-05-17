@@ -13,7 +13,7 @@ python3 interface.py
 See the main directory's README for more details about the project.
 
 ## File Overview
-- `fileReader.py`: Reads in input files.
+- `file_reader.py`: Reads in input files.
 - `interface.py`: The interface and "driver"/main file for the program.
   This is the file that should be used to run the program..
 - `organizer.py`: The Letter Group Organizer algorithm.

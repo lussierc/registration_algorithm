@@ -22,7 +22,7 @@ This project contains a variety of folders. Their purposes are detailed below:
   - `output` folder: Where users can choose to output their sorted students (by letter group).
 - `docs` folder: Contains the documents related to the project. Specifically, writing documents (most importantly `finalReport.pdf`) and presentation slides.
 - `src` folder: Contains all of the source code for the project.
-  - `fileReader.py`: Reads in input files.
+  - `file_reader.py`: Reads in input files.
   - `interface.py`: The interface and "driver"/main file for the program.
     This is the file that should be used to run the program..
   - `organizer.py`: The Letter Group Organizer algorithm.

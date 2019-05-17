@@ -3,7 +3,7 @@
 # Authors: Christian Lussier, Ben Watto, Mikey Spurr
 # "All work is our own unless otherwise cited.""
 
-from fileReader import *
+from file_reader import *
 from organizer import *
 import time
 #from organizer import letter_group_organizer
@@ -37,7 +37,7 @@ def main():
         sorted_students = letter_group_organizer(current_groups, student_list)
         stop_time = time.time()  # stop timer
         time_elapsed = stop_time - start_time  # calculate function run time
-        print() 
+        print()
         print("** It took the algorithm this long to run:", time_elapsed)
         print()
 
